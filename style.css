@@ -1,0 +1,301 @@
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color: #171717;
+  --title-color: #f9f9f9;
+
+  --font-size-text: 18px;
+  --font-size-title: 32px;
+
+  --font-family: 'DM Sans', sans-serif;
+}
+
+
+
+body{
+  background-color: var(--bg-color); 
+}
+
+main, header{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+footer{
+  width: 100%;
+  position: relative;
+  top: 3rem;
+}
+
+.nav-name, .nav-link, .dev, .text-center, .text-card-w{
+  color: var(--title-color);
+}
+
+.nav-name, .text-center{
+  font-size: 26px;
+  font-family: var(--font-family);
+  font-weight: 700;
+}
+
+
+
+.nav-link{
+  font-size: var(--font-size-text);
+  font-weight: 400;
+}
+
+
+.welcome{
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--title-color);
+}
+
+.line{
+  font-family: 'Special Elite', cursive;
+  border-right: 1px solid rgb(255,255,255, 0.75);
+  white-space:nowrap; 
+  overflow: hidden;
+  letter-spacing: 3px;
+
+  
+}
+
+
+.line span{
+  font-size: 14px;
+  margin: 0 auto;
+ 
+  margin-left: 7rem;
+
+}
+
+
+/* Animation */
+.typing-animation{
+  animation: blinkCursor 700ms steps(40) infinite normal, typing 5s steps(40) 1s normal both;
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgb(255,255,255, 0.75);
+  }
+  to{
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to{
+    width: 29.5em;
+  }
+}
+
+.text-center{
+  font-weight: 700;
+  position: relative;
+}
+
+.sobre-mim{
+  font-weight: 700;
+  position: relative;
+  top: 1em;
+}
+
+.custon-button{
+  padding: .5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.text-title-funcao{
+  font-size: 18px;
+}
+
+.text-sobre{
+  font-size: var(--font-size-text);
+  font-weight: 400;
+  color: #828282;
+  text-align: center;
+  line-height: 32px;
+}
+
+.text-funcao, .text-projeto{ 
+  color: #f7f9fa;
+  text-align:justify;
+}
+
+
+.meus-projetos, .minha-carreira, .minhas-tecnologias, .contatos{
+  position: relative;
+  top: 3em;
+}
+
+
+.qualificacoes{
+  display: none;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-4 {
+  position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-4::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #bbb;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-4 {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-4::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -11px;
+  background-color: #bbb;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left-4 {
+  padding: 0px 40px 20px 0px;
+  left: 0;
+}
+
+/* Place the container to the right */
+.right-4 {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-4::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgba(62,69,86, 1);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(62,69,86, 1);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-4::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgba(63,70,87, 1);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(63,70,87, 1) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-4::after {
+  left: -14px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .main-timeline-4::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline-4 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-4::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left-4::after,
+  .right-4::after {
+    left: 18px;
+  }
+
+  .left-4::before {
+    right: auto;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right-4 {
+    left: 0%;
+  }
+}
+
+.gradient-custom, .card-color-1 {
+  /* fallback for old browsers */
+  background: #212529;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(26, 30, 33, 1),
+    rgba(63, 70, 87, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(26, 30, 33, 1),
+    rgba(63, 70, 87, 1)
+  );
+}
+
+.gradient-custom-4, .card-color-2 {
+  /* fallback for old browsers */
+  background: #212529;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to left,
+    rgba(26, 30, 33, 1),
+    rgba(63, 70, 87, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to left,
+    rgba(26, 30, 33, 1),
+    rgba(63, 70, 87, 1)
+  );
+}
+
+
