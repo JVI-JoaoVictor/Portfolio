@@ -363,12 +363,11 @@ input[type=checkbox]{
 /* MEDIAS QUERIS */
 
 
+
 /* // Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
 @media (max-width: 1050px) { 
   
-  main{
-    width: 100bw;
-  }
+ 
   
   .hamburger {
     display: flex;
@@ -390,8 +389,7 @@ input[type=checkbox]{
    header{
     width: 100vw;
     
-   }
- 
+   } 
 
   .primary-header{
     display: none;
