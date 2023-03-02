@@ -449,7 +449,6 @@ input[type=checkbox]{
     }
   }
 
-
   .text-sobre{
     font-size: var(--font-size-text);
     font-weight: 400;
@@ -464,9 +463,64 @@ input[type=checkbox]{
 
 }
 
-/* // Dispositivos médios (tablets com 768px ou mais) */
-@media (max-width: 720px) { 
-  .truncate-carreia{
-   text-overflow: ellipsis;
+
+@media (max-width: 576px) { 
+  .welcome{
+    font-size: 20px;
+    display: grid;
+    grid-template-rows: 2;
   }
+ 
+  .welcome p span:first-child{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+  }
+
+  .line span.dev{
+    font-size: 12px;
+    top: -2.5em;
+    margin-left: 9.5em;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to{
+      width: 15em;
+    }
+  }
+}
+
+
+@media (max-width: 450px) { 
+
+  .welcome{
+    font-size: 18px;
+    display: grid;
+    grid-template-rows: 2;
+  }
+ 
+  .welcome p span:first-child{
+    display: flex;
+    flex-direction: column;
+    margin-left: .5em;
+  }
+
+  .line span.dev{
+    font-size: 12px;
+    top: -2.5em;
+    margin-left: 5.5em;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to{
+      width: 17em;
+    }
+  }
+
 }
