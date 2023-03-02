@@ -102,7 +102,7 @@ header.active .logo, header.active{
   position: relative;
 }
 
-.meus-projetos, .minha-carreira, .minhas-tecnologias, .contatos{
+#sobre, .meus-projetos, .minha-carreira, .minhas-tecnologias{
   position: relative;
   top: 3em;
 }
@@ -128,7 +128,7 @@ header.active .logo, header.active{
 .line span.dev{
   font-size: 14px;
   margin: 0 auto; 
-  margin-left: 7rem;
+  margin-left: 31.5rem;
 }
 
 /* Animation */
@@ -366,6 +366,10 @@ input[type=checkbox]{
 /* // Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
 @media (max-width: 1050px) { 
   
+  main{
+    width: 100bw;
+  }
+  
   .hamburger {
     display: flex;
     position: fixed;
@@ -375,6 +379,7 @@ input[type=checkbox]{
     color: #198754;
     user-select:contain;
     z-index: 100;
+    
    }
 
    input[type=checkbox]:checked ~ .primary-header{
@@ -384,6 +389,7 @@ input[type=checkbox]{
 
    header{
     width: 100vw;
+    
    }
  
 
@@ -395,7 +401,7 @@ input[type=checkbox]{
     z-index: 1;
     height: auto;
     background: linear-gradient(52deg, rgba(26,30,33,1) 23%, rgba(33,37,41,1) 57%, rgba(63,70,87,1) 81%);
-    border-bottom: none;
+    
   }
   .primary-header ul{
     flex-direction: row;
@@ -416,13 +422,37 @@ input[type=checkbox]{
    display: none;
   }
 
+  .welcome{
+    font-size: 24px;
+    display: grid;
+    grid-template-rows: 2;
+  }
+ 
+  .welcome p span:first-child{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+  }
+
+  .line span.dev{
+    font-size: 14px;
+    top: -2.5em;
+    margin-left: 10.5em;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to{
+      width: 17em;
+    }
+  }
+
+
 }
 
 /* // Dispositivos médios (tablets com 768px ou mais) */
 @media (max-width: 810px) { 
-  .welcome p span{
-   position: relative;
-   top: 2rem;
-   left: -8rem;
-  }
+
 }
