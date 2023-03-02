@@ -12,10 +12,18 @@
   --font-family: 'DM Sans', sans-serif;
 }
 
+/* BASE */
 
+html {
+  scroll-behavior: smooth;
+}
 
 body{
   background-color: var(--bg-color); 
+}
+
+main{
+  top: 8rem;
 }
 
 main, header{
@@ -27,8 +35,57 @@ main, header{
 footer{
   width: 100%;
   position: relative;
-  top: 3rem;
+  top: 13rem;
 }
+
+
+/* NAVEGATION */
+
+.primary-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0 11rem;
+  background-color: var(--bg-color); 
+  border-bottom: .8px solid rgb(255,255,255, 0.75);
+}
+
+.container {
+  max-width: 120rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.nav-link:hover, .nav-link:active{
+  color: #198754;
+}
+
+header.active{
+  background: rgb(26,30,33);
+  background: linear-gradient(52deg, rgba(26,30,33,1) 23%, rgba(33,37,41,1) 57%, rgba(63,70,87,1) 81%);
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+  transition: border-radius 1s;
+  transition: background-color 1s; 
+  border-radius: 1%;
+}
+
+header.active .navbar{
+  height: 6rem;
+}
+
+header.active .logo, header.active{
+  color: #313131;
+}
+
+.nav-link{
+  font-size: var(--font-size-text);
+  font-weight: 400;
+}
+
+
+/* REUTILIZAVEIS */
 
 .nav-name, .nav-link, .dev, .text-center, .text-card-w{
   color: var(--title-color);
@@ -40,13 +97,18 @@ footer{
   font-weight: 700;
 }
 
-
-
-.nav-link{
-  font-size: var(--font-size-text);
-  font-weight: 400;
+.text-center{
+  font-weight: 700;
+  position: relative;
 }
 
+.meus-projetos, .minha-carreira, .minhas-tecnologias, .contatos{
+  position: relative;
+  top: 3em;
+}
+
+
+/* SECTION 1 */
 
 .welcome{
   font-family: var(--font-family);
@@ -60,20 +122,14 @@ footer{
   border-right: 1px solid rgb(255,255,255, 0.75);
   white-space:nowrap; 
   overflow: hidden;
-  letter-spacing: 3px;
-
-  
+  letter-spacing: 3px;  
 }
 
-
-.line span{
+.line span.dev{
   font-size: 14px;
-  margin: 0 auto;
- 
+  margin: 0 auto; 
   margin-left: 7rem;
-
 }
-
 
 /* Animation */
 .typing-animation{
@@ -98,16 +154,26 @@ footer{
   }
 }
 
-.text-center{
-  font-weight: 700;
-  position: relative;
-}
+
+
+/* SECTION SOBRE MIM */
 
 .sobre-mim{
   font-weight: 700;
   position: relative;
   top: 1em;
 }
+
+.text-sobre{
+  font-size: var(--font-size-text);
+  font-weight: 400;
+  color: #828282;
+  text-align: center;
+  line-height: 32px;
+}
+
+
+/* SECTION PROJETOS */
 
 .custon-button{
   padding: .5rem 1.5rem;
@@ -119,30 +185,17 @@ footer{
   font-size: 18px;
 }
 
-.text-sobre{
-  font-size: var(--font-size-text);
-  font-weight: 400;
-  color: #828282;
-  text-align: center;
-  line-height: 32px;
-}
-
 .text-funcao, .text-projeto{ 
   color: #f7f9fa;
   text-align:justify;
 }
 
 
-.meus-projetos, .minha-carreira, .minhas-tecnologias, .contatos{
-  position: relative;
-  top: 3em;
-}
-
+/* SECTION CARREIRA */
 
 .qualificacoes{
   display: none;
 }
-
 
 /* The actual timeline (the vertical ruler) */
 .main-timeline-4 {
@@ -298,4 +351,78 @@ footer{
   );
 }
 
+input[type=checkbox]{
+  display: none;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+ }
 
+/* MEDIAS QUERIS */
+
+
+/* // Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+@media (max-width: 1050px) { 
+  
+  .hamburger {
+    display: flex;
+    position: fixed;
+    font-size: 36px;
+    right: 2rem;
+    cursor: pointer;
+    color: #198754;
+    user-select:contain;
+    z-index: 100;
+   }
+
+   input[type=checkbox]:checked ~ .primary-header{
+    display: flex;
+    transition: all 1s ease;
+   }
+
+   header{
+    width: 100vw;
+   }
+ 
+
+  .primary-header{
+    display: none;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    height: auto;
+    background: linear-gradient(52deg, rgba(26,30,33,1) 23%, rgba(33,37,41,1) 57%, rgba(63,70,87,1) 81%);
+    border-bottom: none;
+  }
+  .primary-header ul{
+    flex-direction: row;
+  }
+
+  nav{
+    position: relative;
+    top: -.5rem;
+    left: -3.5rem;
+  }
+ 
+
+  .primary-header ul li a{
+    font-size: 16px;
+  }
+
+  nav img{
+   display: none;
+  }
+
+}
+
+/* // Dispositivos médios (tablets com 768px ou mais) */
+@media (max-width: 810px) { 
+  .welcome p span{
+   position: relative;
+   top: 2rem;
+   left: -8rem;
+  }
+}

@@ -31,40 +31,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="container-fluid mt-3">
-          <a class="navbar-brand" href="#">
-            <img src="./src/image/cerebro.png" alt="Logo" width="80%">
-          <ul class="nav justify-content-end text-lg-right ">
+    
+    <header >
+      <!-- NAV > 920 PX -->    
+      
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label> 
+      <div class="primary-header lg">    
+        <nav class="navbar container-fluid mt-2 container nav-desktop">       
+          <a class="navbar-brand" class="logo">
+            <img src="./src/image/cerebro.png" alt="Logo" width="50%">
+          <ul class="nav nav-list justify-content-end text-lg-right ">
             <li class="nav-item d-flex">
-              <a class="nav-link active " aria-current="page" href="#"
+              <a class="nav-link active nav-menu " onclick="fechaMenu()" aria-current="page" href="#sobre-mim"
                 >Sobre mim</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#">Projetos</a>
+            <li class="nav-item">              
+              <a class="nav-link nav-menu" onclick="fechaMenu()" href="#projetos">Projetos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Carreira</a>
+              <a class="nav-link nav-menu" onclick="fechaMenu()" href="#carreira">Carreira</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Tecnologias</a>
-            </li>
-          
-          </ul>
-        </div>
+              <a class="nav-link nav-menu" onclick="fechaMenu()" href="#tecnologias">Tecnologias</a>
+            </li>         
       </nav>
+    </div>
     </header>
 
-    <main class="mt-2">
+    <main class="mt-2 position-relative">
 
-      <section>
+      <section id="sobre-mim">
         <div class="container-fluid d-flex justify-content-center">
           <div class="welcome lh-sm ">
-            <p class="line m-2  typing-animation ">Seja muito bem vindo! Eu me chamo João Victor
+            <p class="line m-2  typing-animation ">Seja muito bem vindo! <span>Eu me chamo João Victor</span> 
               <br> 
-              <span class="position-relative start-50" >Desenvolvedor Front-End.</span>
+              <span class="dev position-relative start-50" >Desenvolvedor Front-End.</span>
             </p>          
           </div>
         </div>
@@ -178,13 +181,13 @@
 
       <section>   
 
-      <section class="minha-carreira mt-5">
+      <section id="carreira" class="minha-carreira mt-5">
         <div class="mb-5 ">
           <h2 class="text-center">Minhas Experiências e Qualificações</h2>
         </div>
 
-        <div class="d-flex justify-content-center m-2">          
-            <button type="button" class=" btn btn-outline-success btn-lg mx-5 button-trabalhos px-4" onclick="trocaTrabalho()"> Trabalhos</button>        
+        <div class="d-flex justify-content-center m-3">          
+            <button type="button" class=" btn btn-outline-success btn-lg mx-3 button-trabalhos px-4" onclick="trocaTrabalho()"> Trabalhos</button>        
             <button type="button" class="btn btn-outline-success btn-lg button-qualificacoes" onclick="trocaQualificacoes()">Qualificações</button>            
         </div>
 
@@ -327,7 +330,7 @@
 
        <hr style="position:relative; top: 2em; color: #f9f9f9;">
 
-       <section class="minhas-tecnologias ">
+       <section id="tecnologias" class="minhas-tecnologias ">
         <div class="mb-5 ">
           <h2 class="text-center">Tecnologias</h2>
         </div>
@@ -373,7 +376,7 @@
  </main>
 
 
-<footer class="bg-dark text-center text-white mt-5 " >  
+<footer class="bg-dark text-center text-white mt-5 position-relative" >  
     <!-- Section: Social media -->
     <section class="m-2 pt-3 pb-3">
          <!-- Linkedin -->
