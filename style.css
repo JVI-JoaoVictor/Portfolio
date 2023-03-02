@@ -286,7 +286,7 @@ header.active .logo, header.active{
   .timeline-4 {
     width: 100%;
     padding-left: 70px;
-    padding-right: 25px;
+    padding-right: 0;    
   }
 
   /* Make sure that all arrows are pointing leftwards */
@@ -450,9 +450,23 @@ input[type=checkbox]{
   }
 
 
+  .text-sobre{
+    font-size: var(--font-size-text);
+    font-weight: 400;
+    color: #828282;
+    text-align: center;
+    padding: 0 !important;
+    line-height: 32px;
+  }
+  .links-sobre{
+    margin: 0 !important;
+  }
+
 }
 
 /* // Dispositivos médios (tablets com 768px ou mais) */
-@media (max-width: 810px) { 
-
+@media (max-width: 720px) { 
+  .truncate-carreia{
+   text-overflow: ellipsis;
+  }
 }
