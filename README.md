@@ -8,8 +8,9 @@ Criar uma vitrine online para centralizar meus projetos, experiências e formas 
 
 ## 🚀 Demo
 
-🔗 [Ver site ao vivo](#) <!-- Substitua pelo link do GitHub Pages, ex: https://jvi-joaovictor.github.io/Portfolio/ -->
-📸 <!-- Adicione aqui um print da tela inicial -->
+🔗 [Ver site ao vivo](#https://jvi-joaovictor.github.io/Portfolio/) <!-- Substitua pelo link do GitHub Pages, ex: https://jvi-joaovictor.github.io/Portfolio/ -->
+<img width="1337" height="681" alt="Screenshot 2026-07-15 184205" src="https://github.com/user-attachments/assets/b2080546-bea8-474b-bba4-ff444733e041" />
+
 
 ## 🛠️ Tecnologias
 
